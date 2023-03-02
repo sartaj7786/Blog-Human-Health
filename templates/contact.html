@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title  %}Contact Us{% endblock title  %}
+
+
+
+{% block body %}
+
+<section style="background-color : #21446B; height : 650px;">
+ <div class="container py-5 mt-3">
+   <div class="card">
+     <div class="card-body">
+       <h1 class="font-weight-light text-center py-3">Contact Us</h1>
+       <div class="row">
+         <div class="col-lg-6 col-md-12 col-sm-12">
+         <img src="https://media.istockphoto.com/id/1316848283/photo/contact-us-medical-touchscreen-concept.jpg?b=1&s=170667a&w=0&k=20&c=SD_UYZzeZL_ANgk5mYp5Zddvohr8CVjl4Oqx-79dfR0=">
+         </div>
+         <div class="col-lg-6 col-md-12 col-sm-12">
+           <form method="post">
+               {% csrf_token %}
+             <div class="form-row">
+                              {% csrf_token %}
+               <div class="form-group" >
+               <label for="name" >Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+               </div>
+                <div class="form-group">
+                 <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="Enter Your Email">
+                </div>
+                  <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                   <input type="phone" class="form-control" id="phone" name="phone"placeholder="Enter Your Phone Number">
+                   </div>
+                       <div class="form-group">
+                   <label for="desc">Tell me about you what you want to contact me for...</label>
+                   <textarea class="form-control" id="desc"rows="3" name="desc"></textarea>
+                 </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+               
+
+             </div>
+           </form>
+         </div>
+
+         
+       </div>
+
+     </div>
+   </div>
+ </div>
+
+</section>
+
+
+
+{% endblock body %}
+
